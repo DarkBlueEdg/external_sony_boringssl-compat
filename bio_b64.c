@@ -560,7 +560,7 @@ again:
 				goto again;
 				}
 			}
-		else if (ctx->encode != B64_NONE && ctx->base64.num != 0)
+		else if (ctx->encode != B64_NONE && ctx->base64.data_used != 0)
 			{
 			ctx->buf_off=0;
 			EVP_EncodeFinal(&(ctx->base64),
